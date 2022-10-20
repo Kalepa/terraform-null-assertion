@@ -6,12 +6,12 @@ The module forces Terraform to fail if the condition is false by providing an in
 ## Usage
 ```
 module "assertion_unix_only" {
-  source  = "Invicton-Labs/assertion/null"
-  
+  source  = "Kalepa/assertion/null"
+
   // The condition to ensure is TRUE
   // In this example, assert that the operating system uses forward slashes for path separators
   condition = dirname("/") == "/"
-  
+
   // The error message to print out if the condition evaluates to FALSE
   error_message = "This Terraform configuration can only be run on Unix-based machines."
 }
